@@ -43,7 +43,7 @@ class Sentence:
             for i in range(len(res._lis)):
                 if res[i]==other:
                     del res._lis[i]
-                    break
+                    return res
         elif isinstance(other, Sentence):
             nl=[]
             for i in range(len(other)):
@@ -71,5 +71,3 @@ if __name__=="__main__":
         except:
             print("It's all")
     print(c)
-
-
