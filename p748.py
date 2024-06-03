@@ -46,9 +46,9 @@ class Sentence:
                     return res
         elif isinstance(other, Sentence):
             nl=[]
-            for i in range(len(other)):
-                if other[i] not in self:
-                    nl.append(other[i])
+            for i in range(len(self)):
+                if self[i] not in other:
+                    nl.append(self[i])
             return Sentence(nl)
         else:
             raise SentenceError('-', 0)
@@ -60,13 +60,13 @@ class Sentence:
     def __str__(self):
         return self._lis.__str__()
 if __name__=="__main__":
-    c=Sentence("I actually love english on Mechmat")
-    c[2]="hate"
+    c = Sentence("I actually love english on Mechmat")
+    c[2] = "hate"
     try:
-        c[2]=1076
+        c[2] = 1076
     except:
         try:
-            c=c+12
+            c = c + 12
 
         except:
             print("It's all")
